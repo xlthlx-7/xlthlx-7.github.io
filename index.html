@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{% assign home = site.data.home %}
+<section class="intro">
+<h1>{{ home.name | escape }}</h1>
+<p>{{ home.bio | escape }}</p>
+{% if home.github contains 'https://' %}<a href="{{ home.github | escape }}">GitHub 主页</a>{% endif %}
+</section>
+<section id="projects" class="collection">
+<h2>作品</h2>
+<div>
+{% for item in home.projects %}{% if item.visible %}
+<article>
+<h3>{{ item.name | escape }}</h3><p>{{ item.description | escape }}</p>
+{% if item.demo contains 'https://' %}<a href="{{ item.demo | escape }}">打开演示</a>{% endif %}
+{% if item.source contains 'https://' %}<a href="{{ item.source | escape }}">查看源码</a>{% endif %}
+</article>
+{% endif %}{% endfor %}
+</div>
+</section>
+<section id="skills" class="collection">
+<h2>Skills</h2>
+<div>
+{% for item in home.skills %}{% if item.visible %}
+<article><h3>{{ item.name | escape }}</h3><p>{{ item.description | escape }}</p>
+{% if item.link contains 'https://' %}<a href="{{ item.link | escape }}">了解详情</a>{% endif %}</article>
+{% endif %}{% endfor %}
+</div>
+</section>
+<section id="articles" class="collection">
+<h2>文章</h2>
+<div>
+{% for post in site.posts %}
+<article><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
+<h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+{% if post.description %}<p>{{ post.description | escape }}</p>{% endif %}</article>
+{% endfor %}
+</div>
+</section>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ page.title | default: site.data.home.name | escape }}</title>
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+</head>
+<body>
+<header class="nav">
+<a href="{{ '/' | relative_url }}">{{ site.data.home.name | escape }}</a>
+<nav aria-label="主页栏目"><a href="{{ '/' | relative_url }}#projects">作品</a><a href="{{ '/' | relative_url }}#skills">Skills</a><a href="{{ '/' | relative_url }}#articles">文章</a></nav>
+</header>
+<main>{{ content }}</main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+name: xlthlx-7
+bio: 这里收录我做的项目、常用的 Skills 和写下的文章。
+github: https://github.com/xlthlx-7
+projects:
+  - name: 审阅台
+    description: 合同审查工作台的交互演示，涵盖风险复核、报告和知识库。
+    demo: https://xlthlx-7.github.io/review-desk/
+    source: https://github.com/xlthlx-7/review-desk
+    visible: true
+skills:
+  - name: 简历排版
+    description: 将 Markdown 简历排版成 PDF 和 HTML。
+    visible: true

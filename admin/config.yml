@@ -1,0 +1,47 @@
+backend:
+  name: github
+  repo: xlthlx-7/xlthlx-7.github.io
+  branch: main
+local_backend: true
+media_folder: assets/uploads
+public_folder: /assets/uploads
+collections:
+  - name: homepage
+    label: 个人主页
+    files:
+      - name: home
+        label: 主页配置
+        file: _data/home.yml
+        fields:
+          - {label: 公开署名, name: name, widget: string}
+          - {label: 简介, name: bio, widget: text}
+          - {label: GitHub 链接, name: github, widget: string, required: false}
+          - label: 作品
+            name: projects
+            widget: list
+            fields:
+              - {label: 名称, name: name, widget: string}
+              - {label: 简介, name: description, widget: text}
+              - {label: 演示链接, name: demo, widget: string, required: false}
+              - {label: 源码链接, name: source, widget: string, required: false}
+              - {label: 显示, name: visible, widget: boolean, default: true}
+          - label: Skills
+            name: skills
+            widget: list
+            fields:
+              - {label: 名称, name: name, widget: string}
+              - {label: 用途, name: description, widget: text}
+              - {label: 详情链接, name: link, widget: string, required: false}
+              - {label: 显示, name: visible, widget: boolean, default: true}
+  - name: articles
+    label: 文章
+    folder: _posts
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - {label: 版式, name: layout, widget: hidden, default: post}
+      - {label: 标题, name: title, widget: string}
+      - {label: 摘要, name: description, widget: text, required: false}
+      - {label: 发布时间, name: date, widget: datetime}
+      - {label: 标签, name: tags, widget: list, required: false}
+      - {label: 正文, name: body, widget: markdown}
