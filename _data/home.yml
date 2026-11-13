@@ -7,6 +7,11 @@ projects:
     demo: https://xlthlx-7.github.io/review-desk/
     source: https://github.com/xlthlx-7/review-desk
     visible: true
+  - name: carddesk
+    description: 接页（Carddesk）是一款 AI 辅助的知识卡片工作台，帮你把素材和对话整理成相互链接的卡片，沿着链接阅读，在图谱中探索知识之间的关系。
+    demo: https://xlthlx-7.github.io/carddesk/
+    source: https://github.com/xlthlx-7/carddesk
+    visible: true 
 skills:
   - name: 简历排版
     description: 将 Markdown 简历排版成 PDF 和 HTML。
