@@ -12,6 +12,11 @@ projects:
     demo: https://xlthlx-7.github.io/carddesk/
     source: https://github.com/xlthlx-7/carddesk
     visible: true 
+  - name: 魔芋弹琴
+    description: 魔芋弹琴是通过键盘弹奏音乐的小游戏，帮你花一分钟的时间放松休闲，弹奏自己喜爱的曲目，即将支持ai谱曲。
+    demo: https://xlthlx-7.github.io/moyu-tanqin/
+    source: https://github.com/xlthlx-7/carddesk
+    visible: true 
 skills:
   - name: 简历排版
     description: 将 Markdown 简历排版成 PDF 和 HTML。
