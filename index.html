@@ -1,11 +1,15 @@
 ---
 layout: default
+body_class: portfolio
 ---
 {% assign home = site.data.home %}
 <section class="intro">
+<div class="intro-copy">
 <h1>{{ home.name | escape }}</h1>
 <p>{{ home.bio | escape }}</p>
 {% if home.github contains 'https://' %}<a href="{{ home.github | escape }}">GitHub 主页</a>{% endif %}
+</div>
+<div class="intro-art" aria-hidden="true"><span></span></div>
 </section>
 <section id="projects" class="collection">
 <h2>作品</h2>
